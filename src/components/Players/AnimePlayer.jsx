@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import "@vime/core/themes/default.css";
 import "@vime/core/themes/light.css";
 import {

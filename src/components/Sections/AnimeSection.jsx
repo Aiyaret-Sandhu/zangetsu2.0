@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import axios from "axios";
 import { useEffect, useState } from "react";
 import CarouselRenderer from "../Layouts/CarouselRenderer";

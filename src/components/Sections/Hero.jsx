@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import Carousel from "react-elastic-carousel";
@@ -15,7 +17,7 @@ const Hero = ({ setHeroSectionLoaded }) => {
       setFetchedAnime(results);
       setHeroSectionLoaded(true);
     }, []);
-  }, []);
+  }, [baseURL]);
 
   return (
     <>

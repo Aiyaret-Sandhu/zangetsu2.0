@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import { useContext, useEffect, useState } from "react";
 import GridRenderer from "../Layouts/GridRenderer.jsx";
 import axios from "axios";

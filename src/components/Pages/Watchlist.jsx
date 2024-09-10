@@ -1,7 +1,6 @@
 import Navbar from "../Sections/Navbar";
 import { auth } from '../../firebaseConfig';
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { db } from '../../firebaseConfig';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 

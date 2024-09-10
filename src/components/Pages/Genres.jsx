@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import Navbar from "../Sections/Navbar";
 import { useNavigate } from "react-router-dom";
 import "./Genres.css";

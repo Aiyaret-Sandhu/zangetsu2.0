@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import { setConfiguration } from "react-grid-system";
 import { useLocation } from "react-router-dom";
 import InfiniteSection from "../Sections/InfiniteSection";
