@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import AnimeCard from "../Cards/AnimeCard";
 import UpcomingCard from "../Cards/UpcomingCard";
+
 const CarouselRenderer = ({
   finalQuery,
   sectionTitle,
@@ -15,7 +16,7 @@ const CarouselRenderer = ({
 }) => {
   const navigate = useNavigate();
   const breakPoints = [
-    { width: 1, itemsToShow: !isAnimeCard ? 2 : 3 },
+    { width: 425, itemsToShow: !isAnimeCard ? 1 : 2 },
     { width: 580, itemsToShow: !isAnimeCard ? 2 : 4 },
     { width: 800, itemsToShow: !isAnimeCard ? 3 : 4 },
     { width: 900, itemsToShow: !isAnimeCard ? 3 : 5 },
@@ -28,7 +29,9 @@ const CarouselRenderer = ({
   return (
     <div className="carouselinstance">
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        {sectionTitle && <h1 className="row-title">{sectionTitle}</h1>}
+        {sectionTitle && <div className="row-title" style={{
+          fontSize: '3.4rem', fontWeight: '700', textDecoration: 'underline', textDecorationColor: 'purple', marginLeft: '4rem'}}
+          >{sectionTitle}</div>}
         {isAnimeCard && sectionTitle !== "Recommendations" && (
           <a
             onClick={(e) => {

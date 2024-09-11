@@ -4,7 +4,7 @@ html {
 }
 
 .section-upcoming {
-  margin-top: 10px;
+  margin-top: 5rem;
 }
 
 .section-anime,
@@ -63,7 +63,7 @@ button.rec-dot {
 }
 
 .row-title {
-  color: white;
+  color: rgb(2, 224, 2);
   font-size: 1.9rem;
   width: 60%;
   margin-left: 16px;

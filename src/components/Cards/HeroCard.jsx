@@ -23,14 +23,14 @@ const HeaderCarouselCard = ({
   }
 
   return (
-    <div>
+    <div className="wrapper">
       <div
         className="herocard-wrapper"
         style={{
           backgroundImage: ` linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) ),url(${cover})`,
         }}
       >
-        <div className="herocard-animeinfo-wrapper">
+        <div className="herocard-animeinfo-wrapper" style={{}}>
           <h1 className="herocard-animeinfo-title">{title}</h1>
 
           <div className="herocard-animeinfo">

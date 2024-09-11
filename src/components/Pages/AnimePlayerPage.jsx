@@ -45,10 +45,14 @@ const AnimePlayerPage = () => {
 
 const animeProvider = process.env.REACT_APP_CONSUMET_PROVIDER;
   async function fetchVideoById(url) {
-    return await axios.get(url).then(({ data }) => {
-
+   try {
+       return await axios.get(url).then(({ data }) => {
+      console.log(data);
       setCurrentStreamUrl([data.sources[0].url, data.sources[1].url]);
     });
+   } catch {
+      console.error('Error fetching video by id');
+   }
   }
 
   const cleanDescription = (description) => {
@@ -73,6 +77,7 @@ const animeProvider = process.env.REACT_APP_CONSUMET_PROVIDER;
       .get(`${baseURL}/meta/anilist/info/${id}?provider=${animeProvider}`)
       .then(({ data }) => {
         console.log(data);
+        console.log(id);
         setAnime(data);
         setCurrentId(data.episodes[selectedOption - 1].id);
         for (let i = 1; i <= data.episodes.length; i++) {
@@ -153,6 +158,7 @@ const animeProvider = process.env.REACT_APP_CONSUMET_PROVIDER;
         `${baseURL}/meta/anilist/watch/${currentId}?provider=${animeProvider}`
       );
   }, [currentId]);
+
   useEffect(() => {
     if (anime) setCurrentId(anime.episodes[selectedOption - 1].id);
   }, [selectedOption, anime]);
