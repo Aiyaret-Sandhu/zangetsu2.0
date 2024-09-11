@@ -1,4 +1,4 @@
-import Loader from "react-spinners/MoonLoader";
+import Loader from "react-spinners/BounceLoader";
 
 const ClockLoader = ({ color, size }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/zangetsu_logo.png";
 import "./Navbar.css";
 import { auth } from '../../firebaseConfig'; // Ensure your firebaseConfig file is correctly configured
 
@@ -76,7 +76,7 @@ const Navbar = () => {
 
   const getDisplayName = () => {
     if (user && user.displayName) {
-      return user.displayName;
+      return user.displayName.split(' ')[0];
     }
     return user ? user.email.split('@')[0] : 'User';
   };
@@ -99,7 +99,9 @@ const Navbar = () => {
           }}
         >
           <img className="nav-brand-logo" src={logo} alt="logo" />
-          <h3 className="nav-brand-title">Animehub</h3>
+          <h3 className="nav-brand-title" style={{fontWeight: '300', marginTop: '0.5rem'}}>
+            <span style={{fontSize: '3rem'}}>Z</span>
+            angetsu</h3>
         </div>
     
         <input
@@ -116,7 +118,9 @@ const Navbar = () => {
           className="searchbar"
           type="text"
           value={value}
-        ></input>
+        >          
+        </input>
+
         <ul className={active}>
           <li className="nav__item">
             <span
@@ -177,13 +181,16 @@ const Navbar = () => {
               }}>
                 <h1 style={{
                       color: "white",
-                      fontSize: "2rem"
+                      fontSize: "1.8rem",
+                      fontWeight: '300'
                     }}>
                     
-                      Welcome {getDisplayName()}!</h1>
+                      Welcome, 
+                      <span style={{color: '#00ff00', paddingLeft: '1rem'}}>{getDisplayName()}</span>
+                      !</h1>
                 <li>
                   
-                    <div style={{color: "white"}} onClick={handleSignOut}>Sign Out</div>
+                    <span className="nav__link" style={{color: "white"}} onClick={handleSignOut}>Sign Out</span>
                   
                 </li>
               </div>

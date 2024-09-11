@@ -6,6 +6,7 @@ import Carousel from "react-elastic-carousel";
 import { v4 as uuidv4 } from "uuid";
 import HeroCard from "../Cards/HeroCard";
 import Navbar from "./Navbar";
+
 const Hero = ({ setHeroSectionLoaded }) => {
   const carouselRef = useRef(null);
   let resetTimeout;
@@ -24,8 +25,8 @@ const Hero = ({ setHeroSectionLoaded }) => {
       {fetchedAnime.length > 0 && (
         <header className="header">
           <Navbar></Navbar>
-          <section style={{ marginTop: 30 }} className="section-header">
-            return (
+          <section style={{ marginTop: '8rem' }} className="section-header">
+            
             <Carousel
               enableAutoPlay={true}
               ref={carouselRef}
@@ -39,7 +40,7 @@ const Hero = ({ setHeroSectionLoaded }) => {
               }}
               pagination={true}
             >
-              {fetchedAnime.map((item) =>
+              {fetchedAnime.slice(0, -1).map((item) =>
                 item.totalEpisodes &&
                 item.id &&
                 item.releaseDate &&
@@ -60,7 +61,7 @@ const Hero = ({ setHeroSectionLoaded }) => {
                 ) : null
               )}
             </Carousel>
-            );
+            
           </section>
         </header>
       )}

@@ -4,13 +4,14 @@
   justify-content: space-between;
   background-position: center;
   background-size: cover;
-  height: 470px;
+  height: 80vh;
   margin-top: 20px;
   align-items: flex-start;
-  padding: 20px 40px;
+  padding: 10rem 40px;
   text-align: left;
   width: 98.7%;
-  border-radius: 8px;
+  border-radius: 0.25rem;
+  font-weight: 100;
 }
 
 .herocard-wrapper img {
@@ -20,40 +21,46 @@
 
 .herocard-animeinfo-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   gap: 15px;
 }
 
 .herocard-animeinfo {
   color: white;
   display: flex;
-  gap: 20px;
+  gap: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .herocard-animeinfo-title {
-  color: white;
-  font-size: 2.7rem;
+  color: rgb(4, 250, 4);
+  font-size: 5.7rem;
+  width: 50rem;
 }
 .herocard-animeinfo-description {
   text-align: justify;
   color: white;
-  font-family: "Inter", sans-serif;
+  font-family: sans-serif;
   line-height: 1.5;
   width: 50%;
 }
 
 .herocard-btn-watch {
-  background-color: rgba(0, 0, 0, 0.4);
-  border: 1px solid white;
+  background-color: rgba(183, 4, 183, 0.7);
+  border: none;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 9px 15px;
+  padding: 14px 6px;
   font-family: inherit;
-  border-radius: 4px;
-  font-size: 1.5rem;
-  font-weight: bold;
+  border-radius: 0.25rem;
+  font-size: 2.5rem;
+  /* font-weight: bold; */
+  width: 18rem;
+  margin-top: 2rem;
+  cursor: pointer;
 }
 
 .btn-watchnow:hover {
@@ -61,9 +68,10 @@
   transition: 500ms ease;
 }
 
+
 @media screen and (max-width: 768px) {
   .herocard-wrapper {
-    height: 320px;
+    height: 80vh;
   }
   .herocard-animeinfo-item {
     font-size: 1.4rem;

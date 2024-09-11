@@ -27,7 +27,7 @@ const HeaderCarouselCard = ({
       <div
         className="herocard-wrapper"
         style={{
-          backgroundImage: ` linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3) ),url(${cover})`,
+          backgroundImage: ` linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) ),url(${cover})`,
         }}
       >
         <div className="herocard-animeinfo-wrapper">
@@ -62,17 +62,17 @@ const HeaderCarouselCard = ({
               line={4}
             ></TextTruncate>
           </span>
-        </div>
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            fetchVideo(id);
-          }}
-          className="btn herocard-btn-watch"
-        >
-          <PlayCircleOutlined />
-          &nbsp;&nbsp;WATCH
-        </button>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              fetchVideo(id);
+            }}
+            className="btn herocard-btn-watch"
+          >
+            <PlayCircleOutlined />
+            &nbsp;&nbsp;WATCH
+          </button>
+        </div>  
       </div>
     </div>
   );
