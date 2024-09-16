@@ -5,12 +5,17 @@
   transition: all 300ms ease;
   width: 95%;
   margin: 0 auto;
-  display: grid;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* display: grid;
   align-items: center;
   gap: 30px;
   justify-items: center;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  column-gap: 10;
+  column-gap: 10; */
 }
 .genre:hover,
 .format:hover,
@@ -40,14 +45,23 @@
 .formats-title,
 .seasons-title,
 .statuses-title {
-  color: white;
+  color: rgb(2, 234, 2);
   margin-bottom: 10px;
-  font-size: 2.5rem;
+  font-size: 3.6rem;
   margin-top: 40px;
   margin-left: 2.6%;
+  font-weight: 500;
+  /* text-decoration: dotted; */
+  /* text-decoration-color: red; */
+  
+  font-family: "Poppins";
+  display: flex;
+  /* align-self: center; */
+  justify-content: center;
+  text-shadow: 2px 2px 2px rgb(160, 1, 160);
 }
 .genres-title {
-  margin-top: 80px;
+  margin-top: 10rem;
 }
 .statusesdiv {
   padding-bottom: 50px;

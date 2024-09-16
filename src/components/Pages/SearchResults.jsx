@@ -12,12 +12,13 @@ const SearchResults = () => {
         style={{
           fontSize: "3rem",
           color: "white",
-          marginTop: 80,
+          marginTop: 100,
           marginLeft: 20,
+          fontWeight: '500'
         }}
       >
         Search Results for{" "}
-        <span style={{ color: "yellow" }}> {location.state.input}</span>
+        <span style={{ color: "yellow" }}> " {location.state.input} "</span>
       </h1>
       <GridRenderer finalQuery={location.state.finalResults}></GridRenderer>
     </>

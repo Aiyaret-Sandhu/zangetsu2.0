@@ -3,7 +3,7 @@ import AnimeCard from "../Cards/AnimeCard";
 const VerticalCarousel = ({ finalQuery, sectionTitle }) => {
   return (
     <div className="vertical-grid-container">
-      <h1 className="row-title" style={{ marginLeft: "1%", color: "#D8D8D8" }}>
+      <h1 className="row-title" style={{ marginLeft: "1%" }}>
         {sectionTitle}
       </h1>
       <div className="vertical-grid">

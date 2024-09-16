@@ -63,12 +63,12 @@ const SignupPage = () => {
       <Navbar />
       <div className="main-wrapper">
         <h1 className="welcome-text">
-          <span className="welcome-text-dodgerblue">Hola,</span>
+          <span>Hola,</span>
           <br />
-          Welcome to <br /> <span>Animehub </span>
+          Welcome to <br /> <span  className="welcome-text-dodgerblue"> Zangetsu </span>
         </h1>
         <div className="login-container">
-          <h2>Sign Up</h2>
+          <div style={{fontSize: '4rem', fontWeight: '500'}}>Sign in</div>
           <span style={{ color: "#78909C" }}>Please fill in your details.</span>
           <form className="login-form" onSubmit={handleSignup}>
             <label htmlFor="username">Username *</label>

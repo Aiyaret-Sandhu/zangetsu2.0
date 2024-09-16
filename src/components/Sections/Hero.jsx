@@ -40,7 +40,7 @@ const Hero = ({ setHeroSectionLoaded }) => {
               }}
               pagination={true}
             >
-              {fetchedAnime.slice(0, -1).map((item) =>
+              {fetchedAnime.slice(1, -1).map((item) =>
                 item.totalEpisodes &&
                 item.id &&
                 item.releaseDate &&

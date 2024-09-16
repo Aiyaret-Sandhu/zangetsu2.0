@@ -174,6 +174,9 @@ const Genres = () => {
     <>
       <Navbar></Navbar>
       <h1 className="genres-title">Genres</h1>
+
+      <hr  style={{ marginBottom: "4rem", borderColor: "#1e2027",boxShadow: "0px 1px 7px #8230c6"}}/>
+
       <div className="genresdiv">
         {genresinfo.map((genreinfo) => {
           return (
@@ -198,6 +201,9 @@ const Genres = () => {
         })}
       </div>
       <h1 className="formats-title">Formats</h1>
+
+      <hr  style={{ marginBottom: "4rem", borderColor: "#1e2027",boxShadow: "0px 1px 7px #8230c6"}}/>
+
       <div className="formatsdiv">
         {formatsInfo.map((formatInfo) => {
           return (
@@ -226,6 +232,9 @@ const Genres = () => {
         })}
       </div>
       <h1 className="seasons-title">Seasons</h1>
+
+      <hr  style={{ marginBottom: "4rem", borderColor: "#1e2027",boxShadow: "0px 1px 7px #8230c6"}}/>
+
       <div className="seasonsdiv">
         {seasonsInfo.map((seasonInfo) => {
           return (
@@ -250,6 +259,9 @@ const Genres = () => {
         })}
       </div>
       <h1 className="statuses-title">Status</h1>
+
+      <hr  style={{ marginBottom: "4rem", borderColor: "#1e2027",boxShadow: "0px 1px 7px #8230c6"}}/>
+
       <div className="statusesdiv">
         {statusesInfo.map((statusInfo) => {
           return (

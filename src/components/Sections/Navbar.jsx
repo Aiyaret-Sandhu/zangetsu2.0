@@ -144,7 +144,7 @@ const Navbar = () => {
           >
             <span className="nav__link">Top Movies</span>
           </li>
-          <li
+          {/* <li
             onClick={(e) => {
               e.preventDefault();
               navigate("/recentep");
@@ -152,7 +152,7 @@ const Navbar = () => {
             className="nav__item"
           >
             <span className="nav__link">Recent Ep</span>
-          </li>
+          </li> issue in API */} 
           <li
             onClick={(e) => {
               e.preventDefault();

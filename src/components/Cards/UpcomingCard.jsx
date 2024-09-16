@@ -1,4 +1,3 @@
-import TextTruncate from "react-text-truncate";
 import "./UpcomingCard.css";
 const UpcomingCard = ({
   title,
@@ -7,6 +6,8 @@ const UpcomingCard = ({
   setIsPlaying,
   setTrailerId,
 }) => {
+
+  const trimmedTitle = title.length > 36 ? title.slice(0, 36) + "..." : title;
   return (
     <>
       <div
@@ -17,13 +18,6 @@ const UpcomingCard = ({
         }}
         className="upcomingcard-wrapper"
       >
-        <div
-          className="upcomingcard-card"
-          style={{
-            backgroundImage: `url(${image})`,
-          }}
-        ></div>
-
         <a
           onClick={(e) => {
             e.preventDefault();
@@ -31,8 +25,18 @@ const UpcomingCard = ({
           href="/"
           className="upcomingcard-title"
         >
-          <TextTruncate text={title} line={2}></TextTruncate>
+          <p>{trimmedTitle}</p>
+          <span></span>
         </a>
+
+        <div
+          className="upcomingcard-card"
+          style={{
+            backgroundImage: `url(${image})`,
+          }}
+        ></div>
+
+        
       </div>
     </>
   );

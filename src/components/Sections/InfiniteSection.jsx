@@ -104,7 +104,7 @@ const InfiniteSection = ({ url, sectiontitle, itemlimit, id, querytype }) => {
                       }}
                       style={{
                         backgroundColor:
-                          currpage === pageNumber ? "rgb(244, 67, 54)" : "none",
+                          currpage === pageNumber ? "#8230c6" : "none",
                       }}
                     >
                       {pageNumber}

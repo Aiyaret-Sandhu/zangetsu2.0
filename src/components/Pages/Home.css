@@ -4,7 +4,7 @@ html {
 }
 
 .section-upcoming {
-  margin-top: 10px;
+  margin-top: 5rem;
 }
 
 .section-anime,
@@ -63,11 +63,14 @@ button.rec-dot {
 }
 
 .row-title {
-  color: white;
+  color: rgb(2, 224, 2);
   font-size: 1.9rem;
   width: 60%;
   margin-left: 16px;
-  margin-bottom: 3px;
+  margin: 2rem auto;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: red;
 }
 
 .more-button {
@@ -110,8 +113,9 @@ button.rec-dot {
 
 .pageindex {
   display: flex;
-  gap: 40px;
+  gap: 0.25rem;
   justify-content: center;
+  transition: all 0.25s;
 }
 
 @media screen and (max-width: 1000px) {
@@ -149,7 +153,7 @@ button.rec-dot {
 }
 
 .btn-pageindex:hover {
-  border: 1px solid dodgerblue !important;
+  border: 1px solid #8f72db !important;
 }
 
 .modal-video-body {

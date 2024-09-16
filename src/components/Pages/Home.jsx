@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ScrollToTop from "react-scroll-to-top";
+// import ScrollToTop from "react-scroll-to-top";
 import AnimeSection from "../Sections/AnimeSection";
 import Hero from "../Sections/Hero";
 import InfiniteSection from "../Sections/InfiniteSection";
@@ -15,7 +15,7 @@ const Home = () => {
       <Hero setHeroSectionLoaded={setHeroSectionLoaded}></Hero>
       {heroSectionLoaded && (
         <>
-          <UpcomingSection></UpcomingSection> *
+          <UpcomingSection></UpcomingSection>
           <AnimeSection
             url={`${baseURL}/recent-episodes`}
             id={"recent"}
@@ -36,19 +36,21 @@ const Home = () => {
         </>
       )}
 
-      <ScrollToTop
+      {/* <ScrollToTop
+        className="scrolltop"
         style={{
-          border: "1px solid dodgerblue",
+          // border: "1px solid dodgerblue",
           background: "rgb(33, 33, 33)",
           opacity: 0.5,
           color: "white",
           boxShadow: "none",
+          paddingTop: "0.5rem",
+          paddingBottom: "1rem",
         }}
-        className="scrolltop"
         top={1500}
         smooth
         color="#fff"
-      />
+      /> */}
     </>
   );
 };

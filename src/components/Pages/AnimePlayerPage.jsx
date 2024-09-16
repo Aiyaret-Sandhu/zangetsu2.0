@@ -45,10 +45,14 @@ const AnimePlayerPage = () => {
 
 const animeProvider = process.env.REACT_APP_CONSUMET_PROVIDER;
   async function fetchVideoById(url) {
-    return await axios.get(url).then(({ data }) => {
-
+   try {
+       return await axios.get(url).then(({ data }) => {
+      console.log(data);
       setCurrentStreamUrl([data.sources[0].url, data.sources[1].url]);
     });
+   } catch {
+      console.error('Error fetching video by id');
+   }
   }
 
   const cleanDescription = (description) => {
@@ -73,6 +77,7 @@ const animeProvider = process.env.REACT_APP_CONSUMET_PROVIDER;
       .get(`${baseURL}/meta/anilist/info/${id}?provider=${animeProvider}`)
       .then(({ data }) => {
         console.log(data);
+        console.log(id);
         setAnime(data);
         setCurrentId(data.episodes[selectedOption - 1].id);
         for (let i = 1; i <= data.episodes.length; i++) {
@@ -153,6 +158,7 @@ const animeProvider = process.env.REACT_APP_CONSUMET_PROVIDER;
         `${baseURL}/meta/anilist/watch/${currentId}?provider=${animeProvider}`
       );
   }, [currentId]);
+
   useEffect(() => {
     if (anime) setCurrentId(anime.episodes[selectedOption - 1].id);
   }, [selectedOption, anime]);
@@ -176,7 +182,7 @@ const animeProvider = process.env.REACT_APP_CONSUMET_PROVIDER;
                   {anime.genres.join(" • ")}
                 </span>
               </h4>
-              <div className="curranimeinfo" style={{ marginTop: 10 }}>
+              <div className="curranimeinfo" style={{ marginTop: 18 }}>
                 <span className="curranime-platform">
                   <PlayCircleOutlined /> TV Show
                 </span>
@@ -191,7 +197,7 @@ const animeProvider = process.env.REACT_APP_CONSUMET_PROVIDER;
                   <CalendarOutlined /> {anime.releaseDate}
                 </span>
               </div>
-              <form style={{ marginTop: 15 }}>
+              <form style={{ marginBottom: 40 }}>
                 <div className="contindex">
                   {ep.map((ep) => {
                     return (
@@ -243,7 +249,7 @@ const animeProvider = process.env.REACT_APP_CONSUMET_PROVIDER;
                   <span>Watchlist</span>
                 </div>
               </div>
-              <h3 className="summary-title">Synopsis</h3>
+              <h3 className="summary-title">Synopsis </h3>
               <p className="summary-content">
                 <TextTruncate
                   text={description}
@@ -252,19 +258,19 @@ const animeProvider = process.env.REACT_APP_CONSUMET_PROVIDER;
               </p>
               <br />
               <div className="additional-anime-info">
-                <h4 style={{ color: "white" }}>
+                <h4 style={{ color: "rgba(200, 48, 200, 1)" , fontWeight: "300"}}>
                   Studios:&nbsp;
                   <span className="curranime-studios">
                     {anime.studios.join(", ")}
                   </span>
                 </h4>
                 {adaptation && (
-                  <h4 style={{ color: "white" }}>
+                  <h4 style={{ color: "rgba(200, 48, 200, 1)" , fontWeight: "300" }}>
                     Adapation:&nbsp;
                     <span className="curranime-adaptation">{adaptation}</span>
                   </h4>
                 )}
-                <h4 style={{ color: "white" }}>
+                <h4 style={{ color: "rgba(200, 48, 200, 1)" , fontWeight: "300" }}>
                   Status:&nbsp;
                   <span className="curranime-status">{anime.status}</span>
                 </h4>

@@ -30,7 +30,7 @@ const App = () => {
         loggedIn,
       }}
     >
-      {videoIsLoading && <ClockLoader color={"white"} size={105} />}
+      {videoIsLoading && <ClockLoader color={"purple"} size={105} />}
       <BrowserRouter>
         <>
           <Routes>

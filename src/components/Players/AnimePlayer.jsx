@@ -93,10 +93,10 @@ const AnimePlayer = ({ src, animeInfoUrl, setVideoIsLoading }) => {
                 hideOnMouseLeave={true}
                 activeDuration={1000}
               >
-                <Control keys="p" label="-15 s">
+                <Control keys="p" label="-10 s">
                   <svg
                     onClick={() => {
-                      setTime((prevTime) => prevTime - 15);
+                      setTime((prevTime) => prevTime - 10);
                     }}
                     x="0"
                     y="0"
@@ -119,10 +119,10 @@ const AnimePlayer = ({ src, animeInfoUrl, setVideoIsLoading }) => {
                   <Tooltip>- 10s</Tooltip>
                 </Control>
                 <PlaybackControl hideTooltip keys="k/" />
-                <Control keys="n" label="+ 15s">
+                <Control keys="n" label="+ 10s">
                   <svg
                     onClick={() => {
-                      setTime((prevTime) => prevTime + 15);
+                      setTime((prevTime) => prevTime + 10);
                     }}
                     height={37}
                     width={37}

@@ -7,11 +7,16 @@
   cursor: pointer;
 }
 .animeplayer-container {
-  margin-top: 65px;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
 }
 .sharewatchlistcontainer {
-  background-color: #181020;
-  height: 100px;
+  background-color: #2a0f44;
+  height: 80px;
   margin-top: 25px;
   justify-content: space-evenly;
   align-items: center;
@@ -29,8 +34,8 @@
   background-color: #823061;
 }
 .vime-container {
-  width: 97%;
-  margin: 0 auto;
+  width: 96%;
+  margin: 1rem auto;
 }
 .vertical-grid-container {
   display: block;
@@ -54,7 +59,7 @@
 }
 .vertical-grid {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  max-height: 980px;
+  max-height: 133rem;
   overflow-x: hidden;
   display: grid;
   overflow-y: scroll;
@@ -73,16 +78,17 @@
   padding: 0px 15px;
 }
 .curranimeinfo {
-  margin-top: 5px;
+  margin-bottom: 4rem;
   display: flex;
   gap: 25px;
+  font-size: 1.6rem;
 }
 .contindex {
   overflow-y: scroll;
-  max-height: 100px;
+  max-height: 23.6rem;
   height: fit-content;
   display: grid;
-  gap: 4px 4px;
+  gap: 0.6rem;
   justify-items: start;
   justify-content: start;
   align-items: start;
@@ -94,7 +100,9 @@
 }
 .anime-title {
   font-size: 1.8rem;
-  color: white;
+  color: yellow;
+  font-family: "Poppins";
+  font-weight: 500;
 }
 .curranime-status,
 .curranime-adaptation,
@@ -105,21 +113,24 @@
 }
 .curranime-genres {
   color: #197ee0;
+  font-weight: 300;
 }
 .summary-content {
   text-align: justify;
   color: #d8d8d8;
   font-size: 1.35rem;
-  font-weight: lighter;
+  font-weight: 200;
 }
 .summary-title {
-  font-size: 1.7rem;
-  color: white;
-  margin-top: 20px;
+  font-size: 2rem;
+  color: rgb(2, 243, 2);
+  margin: 1rem auto;
+  font-weight: 400;
+  margin-top: 3rem;
 }
 .epindex {
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 0.1rem;
   height: 30px;
   width: 50px;
   color: white;
@@ -143,10 +154,11 @@
   color: white;
 }
 .curranime {
-  width: 99%;
+  width: 96.2%;
   padding: 15px;
-  background-color: #0f0617;
+  background-color: #1b171b;
   line-height: 1.5;
+  border-radius: 0.25rem;
 }
 
 @media screen and (max-width: 1500px) {

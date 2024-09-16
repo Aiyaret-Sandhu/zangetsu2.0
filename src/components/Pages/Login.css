@@ -22,19 +22,21 @@
 .welcome-text {
   color: white;
   font-size: 5.6rem;
+  font-weight: 600;
 }
 
 .login-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 6px;
+  gap: 1rem;
   width: 96%;
   max-width: 400px;
-  padding: 50px;
+  padding: 4rem;
   color: black;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 0.25rem;
+  margin-top: 7rem;
 }
 .extras div:first-of-type {
   display: flex;
@@ -48,7 +50,8 @@
   justify-content: space-between;
 }
 .welcome-text-dodgerblue {
-  color: dodgerblue;
+  color: yellow;
+  font-size: 8rem;
 }
 .login-form {
   margin-top: 8px;
@@ -59,14 +62,15 @@
 
 .login-container button {
   margin-top: 8px;
-  background-color: #131418;
+  background-color: #aec802;
   outline: none;
   border: none;
   font-size: 1.4rem;
   color: white;
-  border-radius: 8px;
+  border-radius: 0.25rem;
   padding: 12px 0px;
   justify-self: center;
+  cursor: pointer;
 }
 .login-form button {
   background-color: dodgerblue;
@@ -89,6 +93,7 @@
   padding: 12px;
   outline: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.25rem;
   background-color: #212121;
+  margin-bottom: 1rem;
 }
