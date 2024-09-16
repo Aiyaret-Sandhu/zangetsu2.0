@@ -30,7 +30,11 @@ const CarouselRenderer = ({
     <div className="carouselinstance">
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         {sectionTitle && <div className="row-title" style={{
+<<<<<<< HEAD
           fontSize: '2.8rem', fontWeight: '500', textDecoration: 'underline', textDecorationColor: 'purple', marginBottom: '2rem'}}
+=======
+          fontSize: '3.4rem', fontWeight: '700', textDecoration: 'underline', textDecorationColor: 'purple', marginLeft: '4rem'}}
+>>>>>>> 989d8bc7ecc55ad0b7e6c5b02ada647ab53bdeae
           >{sectionTitle}</div>}
         {isAnimeCard && sectionTitle !== "Recommendations" && (
           <a
