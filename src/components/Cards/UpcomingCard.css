@@ -114,13 +114,7 @@
 }
 @media screen and (min-width: 1400px) {
   .upcomingcard-card {
-<<<<<<< HEAD
-    /* height: 400px; */
-    /* width: 340px; */
-=======
-    height: 400px;
-    width: 340px;
->>>>>>> 989d8bc7ecc55ad0b7e6c5b02ada647ab53bdeae
+
   }
 }
 @media screen and (min-width: 1600px) {
@@ -177,22 +171,15 @@
   align-items: center;
   vertical-align: middle;
   justify-content: flex-end;
-<<<<<<< HEAD
   flex-wrap: nowrap;
   row-gap: 50px;
   font-weight: 400;
-=======
-  row-gap: 50px;
->>>>>>> 989d8bc7ecc55ad0b7e6c5b02ada647ab53bdeae
+
 }
 
 .upcomingcard-title p {
   transform: rotate(270deg);
-<<<<<<< HEAD
   white-space: nowrap;
-=======
-  white-space: wrap;
->>>>>>> 989d8bc7ecc55ad0b7e6c5b02ada647ab53bdeae
   font-size: 17px;
   width: 70rem;
   padding-left: 34rem;
