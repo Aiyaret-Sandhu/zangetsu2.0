@@ -3,4 +3,6 @@ node_modules/
 
 # Ignore .env file
 
+
 # Ignore db folder inside src directory
+src/dbconfig/
